@@ -11,7 +11,7 @@ Team members:
 - **Rui Chen** (rc381) 
 - **Junhan Xu** (jx139)
 
-This repository hosts the IDS706-Data Engineering Systems Fall 2023 Final Project, encompassing various components:
+This repository hosts the **IDS706-Data Engineering Systems Fall 2023 Final Project**, encompassing various components:
 
 - ``Data Engineering Pipeline``: The core of the project, encapsulated in the **Jupyter Notebook** named ``eda-bank-loan-default-risk-analysis.ipynb``. This notebook comprehensively outlines the **Extract, Transform, and Load (ETL)** process applied to analyze bank loan data. Given the dataset's size and computational demands, the notebook is executed on the **Azure Databricks** platform for optimal performance.
 
@@ -91,3 +91,8 @@ The **FastAPI** library facilitates the creation of a microservice providing HTT
 - ``Continuous Integration and Continuous Delivery (CI/CD)``: enabled by **GitHub Actions** defined in ``.github/workflows``
 - ``GitHub Configurations``: enabled in ``.devcontainer`` configurations for ``GitHub Codespaces``, making the local version of project completely reproducible
 - ``Quantitative Assessment``: see the ``Load Test`` part of ``Microservice`` content above
+
+---------
+
+**These represent the concluding lines of code that Yuchen composes as he concludes his M.S. ECE** **program at Duke. The remarkable journey he embarked on since August 2020 will forever be etched in** 
+**his memory. Yuchen expresses sincere gratitude to the outstanding teaching faculty and classmates** **who played a pivotal role in shaping him into an improved software engineer and, above all, a** **better individual.** - Dec 9, 2023
