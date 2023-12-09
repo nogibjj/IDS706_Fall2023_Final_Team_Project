@@ -4,6 +4,8 @@
 [![test](https://github.com/nogibjj/IDS706_Fall2023_Final_Team_Project/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Final_Team_Project/actions/workflows/test.yml)
 # IDS706 Fall 2023 Final Project
 
+### Demo Video On Youtube: https://youtu.be/SaHYtWzRKRo
+
 Team members: 
 - **Yuchen Zhang** (yz674) 
 - **Xuesen Wen** (xw202) 
