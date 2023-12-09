@@ -26,3 +26,5 @@ databricks-cli
 azure-storage-blob
 pyodbc
 sqlalchemy
+# Load Test
+locust
