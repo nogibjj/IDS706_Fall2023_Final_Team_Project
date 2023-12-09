@@ -1,12 +1,17 @@
 import io
 import pandas as pd
 from azure.storage.blob import BlobServiceClient
-import pyodbc
+
+# import pyodbc
 from sqlalchemy import create_engine
 
 # Azure Blob Storage
-blob_service_client = BlobServiceClient.from_connection_string("DefaultEndpointsProtocol=https;AccountName=ids706finalstorage;AccountKey=PNPwVMJ4uyUHDt6D8GJyajhq8WQZK0oWQYnbWmqyv1Dm9FR+cNmQ6Apx66GWg8KCSKWLWp5gtc1K+ASteQZd+A==;EndpointSuffix=core.windows.net")
-blob_client_application_data = blob_service_client.get_blob_client("container", "application_data_test.csv")
+blob_service_client = BlobServiceClient.from_connection_string(
+    "DefaultEndpointsProtocol=https;AccountName=ids706finalstorage;AccountKey=PNPwVMJ4uyUHDt6D8GJyajhq8WQZK0oWQYnbWmqyv1Dm9FR+cNmQ6Apx66GWg8KCSKWLWp5gtc1K+ASteQZd+A==;EndpointSuffix=core.windows.net"
+)
+blob_client_application_data = blob_service_client.get_blob_client(
+    "container", "application_data_test.csv"
+)
 # blob_client_previous_application = blob_service_client.get_blob_client("container", "previous_application.csv")
 
 # Read CSV from Azure Blob Storage into pandas DataFrame
@@ -29,5 +34,7 @@ connection_str = "mssql+pyodbc://ids706-final:P0stgres@ids706-final-sql-server.d
 engine = create_engine(connection_str)
 
 # Write DataFrame to Azure SQL Database
-application_df.to_sql('application_data_test', con=connection_str, if_exists='append', index=False)
+application_df.to_sql(
+    "application_data_test", con=connection_str, if_exists="append", index=False
+)
 # previous_df.to_sql('previous_application', con=cnxn, if_exists='append', index=False)
