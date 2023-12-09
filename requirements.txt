@@ -22,4 +22,6 @@ uvicorn[standard]
 # Databricks
 databricks-cli
 databricks-connect==14.2.0
-
+# Azure
+azure-storage-blob
+pyodbc
