@@ -9,7 +9,7 @@
 Team members: 
 - **Yuchen Zhang** (yz674) 
 - **Xuesen Wen** (xw202) 
-- **Yuhan Xue** (yz167) 
+- **Yuhan Xue** (yx167) 
 - **Rui Chen** (rc381) 
 - **Junhan Xu** (jx139)
 
