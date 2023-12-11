@@ -32,6 +32,15 @@ This repository hosts the **IDS706-Data Engineering Systems Fall 2023 Final Proj
 ## Architectural Diagram
 ![](<img/Architectural Diagram.jpg>)
 
+## How to Run the Program
+All the dependencies and environment settings are included in ``Dockerfile``. To deploy the application, simply build the docker image and upload to ``Docker Hub``.
+```bash
+sudo docker login --username=yuchenz427
+sudo docker build --no-cache -t yuchenz427/ids706_fall2023_final_project .
+sudo docker push yuchenz427/ids706_fall2023_final_project
+```
+Then it can be deployed to any cloud service as you like.
+
 ## Data Engineering Pipeline: Bank Loan Default Risk Analysis
 This pipeline employs EDA on a real-world business scenario using the **loan-defaulter dataset** from ``Kaggle``. The ``eda-bank-loan-default-risk-analysis.ipynb`` notebook, deployed on Azure Databricks, loads and manipulates data using the **Pandas** library. The pipeline comprises several steps:
 - ``Load Data``: Imports CSV dataset files, checks dimensions, and inspects columns.
@@ -94,6 +103,11 @@ The **FastAPI** library facilitates the creation of a microservice providing HTT
 - ``Continuous Integration and Continuous Delivery (CI/CD)``: enabled by **GitHub Actions** defined in ``.github/workflows``
 - ``GitHub Configurations``: enabled in ``.devcontainer`` configurations for ``GitHub Codespaces``, making the local version of project completely reproducible
 - ``Quantitative Assessment``: see the ``Load Test`` part of ``Microservice`` content above
+- ``Limitations and potential areas for improvement``:
+    - ``Complexity of microservice``: The functionality of our micro service is kind of simple. For improvement, we could add more features to make a better interface between the users and the data pipeline
+    - ``Load Test``: We are not able to test the complete performance of Azure App Service using Locust. There are some alternative methods that worth trying, for example: the load testing feature provided by Azure.
+- ``How AI Pair Programming tools were used``: Both ``GitHub Copilot`` and ``ChatGPT`` are very useful during the developement process. They helped us save time on searching for technical details.
+![](img/AI_1.png) ![](img/AI_2.png)
 
 ---------
 
