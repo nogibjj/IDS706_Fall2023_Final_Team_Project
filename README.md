@@ -44,7 +44,7 @@ This pipeline employs EDA on a real-world business scenario using the **loan-def
     - Checking loan repayment status based on Organization type: Organizations with highest percent of loans not repaid are Transport: type 3 (16%), Industry: type 13 (13.5%), Industry: type 8 (12.5%) and Restaurant (less than 12%). Self employed people have relative high defaulting rate, and thus should be avoided to be approved for loan or provide loan with higher interest rate to mitigate the risk of defaulting.<br>![](img/pipeline_3.png)
 
 ## Microservice: FastAPI application
-The **FastAPI** library facilitates the creation of a microservice providing HTTP-accessible APIs. This project's microservice, containerized with **Docker**, interfaces with the data engineering pipeline. Key steps include ODBC driver installation, data preparation, and interaction with Azure App Service. It has several steps:
+The **FastAPI** library facilitates the creation of a microservice providing HTTP-accessible APIs. This project's microservice, containerized with **Docker**, interfaces with the data engineering pipeline. We enables **logging** features provided by the uvicorn framework. Key steps include ODBC driver installation, data preparation, and interaction with Azure App Service. It has several steps:
 - ``ODBC Driver Installation``: included in ``driver.sh``. **ODBC Driver** is a necessary component for the microservice to interact with **Azure SQL database**.
 - ``Data Preparation``: included in ``data_prepare.py``. It reads datasets from **Azure Blob Storage** to **pandas dataframe**, then makes use of ``SQLAlchemy`` and ``pyodbc`` to write the data to **Azure SQL databse**.
 - ``Azure App Service``: users can reach out to the service via the public domain provided by ``Azure App Service`` and get the results of SQL queries, for example, this route simply returns all the rows in the database:<br>![](img/fastapi_1.png)
@@ -52,6 +52,7 @@ The **FastAPI** library facilitates the creation of a microservice providing HTT
 <br>![](img/fastapi_2.png)<br>![](img/fastapi_3.png)
 
 ## Miscellaneous
+- ``Teamwork Reflection``: See the attached ``Teamwork Reflection.pdf``
 - ``Infrastructure as Code (IaC)``: We make use of ``Azure Resource Manager (ARM)`` templates to deploy the **Azure App**. Specifically, we added customized template to ``Azure Portal``: 
 ```json
 {
